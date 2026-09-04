@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>medium-autopublish — a Claude Code skill</title>
+<meta name="description" content="Publish one Markdown file to dev.to via API, then import it into Medium." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:#fff; --bg-soft:#f4f5f7; --bg-code:#f0f1f4; --fg:#16181d;
+    --fg-soft:#5b6270; --border:#e2e4e9; --accent:#0b6bcb; --accent-soft:#e5f0fb;
+    --radius:14px; --maxw:860px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#0e1014; --bg-soft:#161a21; --bg-code:#1a1f28; --fg:#e9ebf0;
+      --fg-soft:#99a1b0; --border:#262c37; --accent:#5aa2f0; --accent-soft:#16232f;
+    }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--bg); color:var(--fg); line-height:1.65;
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  code,pre { font-family:"JetBrains Mono",ui-monospace,Menlo,monospace; }
+  header { padding:96px 0 64px; border-bottom:1px solid var(--border); }
+  .eyebrow {
+    display:inline-block; font-size:13px; font-weight:600; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--accent); background:var(--accent-soft);
+    padding:5px 12px; border-radius:999px; margin-bottom:22px;
+  }
+  h1 { font-size:clamp(2rem,5vw,3rem); line-height:1.15; margin:0 0 18px; font-weight:700; letter-spacing:-.02em; }
+  .lede { font-size:1.2rem; color:var(--fg-soft); margin:0 0 32px; max-width:42ch; }
+  .cta-row { display:flex; flex-wrap:wrap; gap:12px; }
+  .btn {
+    display:inline-flex; align-items:center; gap:8px; padding:12px 20px;
+    border-radius:10px; font-weight:600; font-size:15px; text-decoration:none;
+    border:1px solid var(--border); color:var(--fg); background:var(--bg-soft);
+    transition:transform .12s ease,border-color .12s ease;
+  }
+  .btn:hover { transform:translateY(-1px); border-color:var(--accent); }
+  .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  section { padding:56px 0; border-bottom:1px solid var(--border); }
+  h2 { font-size:1.5rem; font-weight:700; margin:0 0 20px; letter-spacing:-.01em; }
+  p { margin:0 0 16px; }
+  pre {
+    background:var(--bg-code); border:1px solid var(--border); border-radius:10px;
+    padding:16px 18px; overflow-x:auto; font-size:13.5px; line-height:1.6; margin:0 0 16px;
+  }
+  .placeholder {
+    border:1px dashed var(--border); border-radius:10px; padding:14px 16px;
+    color:var(--fg-soft); font-size:.9rem; font-family:"JetBrains Mono",monospace; background:var(--bg-soft);
+  }
+  footer { padding:48px 0 72px; color:var(--fg-soft); font-size:.9rem; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="eyebrow">Claude Code Skill</span>
+    <!--MARKETING:hero-->
+    <h1>medium-autopublish</h1>
+    <p class="lede"><!--MARKETING:lede-->Publish one Markdown file to dev.to via API, then import it into Medium.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://github.com/delight0517/medium-autopublish">View on GitHub</a>
+      <a class="btn" href="#install">Install</a>
+    </div>
+    <div class="placeholder" style="margin-top:28px">&lt;!--MARKETING:hero--&gt; / &lt;!--MARKETING:lede--&gt; — final hero copy here.</div>
+  </div>
+</header>
+
+<section id="why">
+  <div class="wrap">
+    <h2>Why</h2>
+    <!--MARKETING:why-->
+    <div class="placeholder">&lt;!--MARKETING:why--&gt; — expanded value narrative / social proof.</div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <h2>Install</h2>
+    <p>Clone into your Claude Code skills directory — detected automatically, no registration step:</p>
+    <pre>git clone https://github.com/delight0517/medium-autopublish \
+  ~/.claude/skills/medium-autopublish</pre>
+    <p>Details in <a href="https://github.com/delight0517/medium-autopublish/blob/main/INSTALL.md">INSTALL.md</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <!--MARKETING:footer-->
+    <p>MIT licensed. Copyright &copy; 2026 Geunhu Kim (delight0517).<br />
+    <a href="https://github.com/delight0517/medium-autopublish">github.com/delight0517/medium-autopublish</a></p>
+    <div class="placeholder">&lt;!--MARKETING:footer--&gt; — tagline / portfolio / contact.</div>
+  </div>
+</footer>
+</body>
+</html>
