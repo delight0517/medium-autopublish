@@ -20,3 +20,7 @@ node_modules/
 dist/
 build/
 *.log
+
+app/node_modules/
+app/.env
+app/.auth/
